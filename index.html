@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <title>Vũ Trụ Của Bé 12-02</title>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Quicksand:wght@500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.5.1/dist/confetti.browser.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+
+    <div id="game-container">
+        <div id="screen1" class="screen active">
+            <h1>Hành Trình Thần Long 🐉</h1>
+            <p>Chào mừng <b>Công chúa 1m61</b> đến với trạm không gian!</p>
+            <p>Vượt qua 10 thử thách để mở khóa món quà bí mật nhé!</p>
+            <button class="btn" onclick="startGame()">Bắt đầu ngay ✨</button>
+        </div>
+
+        <div id="screen-quiz" class="screen">
+            <h2 id="chapter-name">CHƯƠNG I</h2>
+            <h3 id="quiz-title">Câu hỏi số 1</h3>
+            <p id="quiz-question"></p>
+            <div id="quiz-options"></div>
+            <p id="quiz-hint"></p>
+        </div>
+
+        <div id="screen-final" class="screen">
+            <h1>Chúc Mừng Sinh Nhật! 🎂</h1>
+            <div id="final-wish"></div>
+            <button class="btn" style="background: linear-gradient(45deg, #ff758c, #00d2ff);" onclick="openUniverse()">🚀 KHÁM PHÁ VŨ TRỤ ẢNH</button>
+        </div>
+    </div>
+
+    <div id="universe-overlay">
+        <div id="ui-hint">Cuộn chuột để Zoom • Xoay • Bấm vào ảnh ✨</div>
+        <button id="close-universe" onclick="closeUniverse()">Quay lại ⬅️</button>
+        <div id="canvas-container"></div>
+    </div>
+
+    <div id="photo-modal" onclick="this.style.display='none'">
+        <img id="full-img" src="">
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+</html>
